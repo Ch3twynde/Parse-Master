@@ -6,25 +6,32 @@
 //  Copyright (c) 2012 MilesAlden. All rights reserved.
 //
 
-#import "OBJCReturnTypes.h"
-#import "NSTNDictionaryAdditions.h"
+#import "FiR3FiOBJCReturnTypes.h"
+#import "FiR3FiDictionaryAdditions.h"
 
-@implementation OBJCReturnTypes
+@implementation FiR3FiOBJCReturnTypes
 
 
 // Sugar
++ (NSString *)returnTypeAsStringForKey: (NSString *)key {
+    
+    return [NSString stringWithCString:[self returnTypeForKey:key] encoding:NSUTF8StringEncoding];
+    
+}
+
+
 + (const char *)returnTypeForKey: (NSString *)key {
     
     // Check if the guy gave us the
     // human form of the type, and if the key exists
-    NSDictionary *comparingDict = [OBJCReturnTypes returnTypesFromHumanKeys];
+    NSDictionary *comparingDict = [FiR3FiOBJCReturnTypes returnTypesFromHumanKeys];
     if ( [comparingDict containsKey:key] ) {
         return [[comparingDict objectForKey:key] cStringUsingEncoding:NSUTF8StringEncoding];
     }
     
     // Check if the guy gave us the ObjC
     // encoding of the type, and if the key exists
-    comparingDict = [OBJCReturnTypes returnTypesDictionary];
+    comparingDict = [FiR3FiOBJCReturnTypes returnTypesDictionary];
     if ( [comparingDict containsKey:key] ) {
         return [[comparingDict objectForKey:key] cStringUsingEncoding:NSUTF8StringEncoding];
     }

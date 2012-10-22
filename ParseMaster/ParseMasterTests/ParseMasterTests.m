@@ -7,9 +7,9 @@
 //
 
 #import "ParseMasterTests.h"
-#import "ParseMaster.h"
-#import "OBJCReturnTypes.h"
-#import "NSTNDictionaryAdditions.h"
+#import "FiR3FiParseMaster.h"
+#import "FiR3FiOBJCReturnTypes.h"
+#import "FiR3FiDictionaryAdditions.h"
 
 
 
@@ -31,13 +31,13 @@
 
 - (void)testPtrSetting
 {
-    ParseMaster *parser = [[ParseMaster alloc] init];
+    FiR3FiParseMaster *parser = [[FiR3FiParseMaster alloc] init];
     
     // Values to test
     const char *aPtr = "Silly String";
     char aChar = 'a';
     int anInt = INT_MAX;
-    BOOL aBOOL = NO;
+    BOOL aBOOL = YES;
     float aFloat = 3.141592f;
     double aDouble = 3.14159265358973;
     short aShort = SHRT_MAX;
@@ -47,90 +47,119 @@
     unsigned int aUInt = UINTMAX_MAX;
     void *nullPtr = NULL;
     long long aLongLong = LONG_LONG_MAX;
-    char boolAsChar = (char)NO;
+    char boolAsChar = (char)YES;
     
     // char *
-    const char *newType = [OBJCReturnTypes returnTypeForKey:@"char *"];
-    NSString *stringResult = [parser stringWithPrimitiveType:newType pointerToData:aPtr];
+    NSError *err;
+    NSString *newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"char *"];
+    NSString *stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:aPtr length:strlen(aPtr)]
+                                                    andType:newType
+                                                      error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );    
     NSLog(@"result: %s : %@", aPtr, stringResult);
     
     // char
-    newType = [OBJCReturnTypes returnTypeForKey:@"char"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aChar];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"char"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aChar length:sizeof(aChar)]
+                                                    andType:newType
+                                                      error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %c : %@",aChar, stringResult);
     
     // int
-    newType = [OBJCReturnTypes returnTypeForKey:@"int"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&anInt];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"int"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&anInt length:sizeof(anInt)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %d : %@",anInt, stringResult);
     
     // bool
-    newType = [OBJCReturnTypes returnTypeForKey:@"bool"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aBOOL];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"bool"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aBOOL length:sizeof(aBOOL)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %d : %@",aBOOL, stringResult);
     
     // float
-    newType = [OBJCReturnTypes returnTypeForKey:@"float"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aFloat];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"float"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aFloat length:sizeof(aFloat)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %f : %@",aFloat, stringResult);
     
     // double
-    newType = [OBJCReturnTypes returnTypeForKey:@"double"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aDouble];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"double"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aDouble length:sizeof(aDouble)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %f : %@",aDouble, stringResult);
     
     // short
-    newType = [OBJCReturnTypes returnTypeForKey:@"short"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aShort];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"short"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aShort length:sizeof(aShort)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %hd : %@",aShort, stringResult);
     
     // long
-    newType = [OBJCReturnTypes returnTypeForKey:@"long"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aLong];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"long"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aLong length:sizeof(aLong)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %li : %@", aLong, stringResult);
     
     
     // uShort
-    newType = [OBJCReturnTypes returnTypeForKey:@"unsigned short"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aUShort];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"unsigned short"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aUShort length:sizeof(aUShort)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %u : %@",aUShort, stringResult);
     
     // uLong
-    newType = [OBJCReturnTypes returnTypeForKey:@"unsigned long"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aULong];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"unsigned long"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aULong length:sizeof(aULong)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %lu : %@", aULong, stringResult);
     
     // uInt
-    newType = [OBJCReturnTypes returnTypeForKey:@"unsigned int"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aUInt];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"unsigned int"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aUInt length:sizeof(aUInt)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %u : %@",aUInt, stringResult);
     
     // NULL
-    newType = [OBJCReturnTypes returnTypeForKey:@"pointer"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&nullPtr];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"pointer"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&nullPtr length:sizeof(nullPtr)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %p : %@",nullPtr, stringResult);
 
     // long long
-    newType = [OBJCReturnTypes returnTypeForKey:@"unsigned long long"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&aLongLong];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"unsigned long long"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aLongLong length:sizeof(aLongLong)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %llu : %@",aLongLong, stringResult);
 
     // bool as char
-    newType = [OBJCReturnTypes returnTypeForKey:@"char"];
-    stringResult = [parser stringWithPrimitiveType:newType pointerToData:&boolAsChar];
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"char"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&boolAsChar length:sizeof(boolAsChar)]
+                                          andType:newType
+                                            error:&err];
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %c : %@",boolAsChar, stringResult);
 

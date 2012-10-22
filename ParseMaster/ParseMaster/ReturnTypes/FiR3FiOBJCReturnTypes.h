@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OBJCReturnTypes : NSObject
+@interface FiR3FiOBJCReturnTypes : NSObject
 
 
 + (NSDictionary *)returnTypesDictionary;
 + (NSDictionary *)returnTypesFromHumanKeys;
 + (const char *)returnTypeForKey: (NSString *)key;
++ (NSString *)returnTypeAsStringForKey: (NSString *)key;
 
 
 @end

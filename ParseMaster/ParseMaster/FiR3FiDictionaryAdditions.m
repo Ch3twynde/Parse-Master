@@ -6,10 +6,10 @@
 //
 //
 
-#import "NSTNDictionaryAdditions.h"
-#import "NSTNArrayAdditions.h"
+#import "FiR3FiDictionaryAdditions.h"
+#import "FiR3FiArrayAdditions.h"
 
-@implementation NSDictionary (SettingsDictionaries)
+@implementation NSDictionary (FiR3FiSettingsDictionaries)
 
 
 + (NSDictionary *)dictionaryWithEnsightenToggleSwitch {

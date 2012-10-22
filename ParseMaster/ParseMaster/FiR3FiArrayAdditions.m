@@ -6,10 +6,10 @@
 //
 //
 
-#import "NSTNArrayAdditions.h"
-#import "NSTNDictionaryAdditions.h"
+#import "FiR3FiArrayAdditions.h"
+#import "FiR3FiDictionaryAdditions.h"
 
-@implementation NSArray (NSTNArrayAdditions)
+@implementation NSArray (FiR3FiArrayAdditions)
 
 
 + (NSArray *)arrayWithPreferenceSpecifierAndGroup {

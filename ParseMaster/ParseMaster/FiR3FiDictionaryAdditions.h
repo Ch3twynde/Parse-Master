@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (SettingsDictionaries)
+@interface NSDictionary (FiR3FiSettingsDictionaries)
 
 + (NSDictionary *)dictionaryWithEnsightenToggleSwitch;
 + (NSDictionary *)rootPlistEmptyDictionary;

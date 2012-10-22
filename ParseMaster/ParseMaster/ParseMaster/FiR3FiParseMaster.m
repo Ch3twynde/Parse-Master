@@ -6,60 +6,101 @@
 //  Copyright (c) 2012 MilesAlden. All rights reserved.
 //
 
-#import "ParseMaster.h"
-#import "OBJCReturnTypes.h"
+#import "FiR3FiParseMaster.h"
+#import "FiR3FiOBJCReturnTypes.h"
 
-@implementation ParseMaster
+@implementation FiR3FiParseMaster
 
 
 
-- (NSString *)parsePrimitive: (NSError *)error {
+- (NSString *)parsePrimitive: (NSError **)error {
        
     // Error checking
-    if ( ptr == NULL ) {
-        if (error) {
-            error = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
+    
+    // Nil data
+    if ( self.ptrAsData == nil ) {
+        if (*error) {
+            *error = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
                                         code:2
-                                    userInfo: @{ NSLocalizedDescriptionKey : @"Pointer was NULL."} ];
-            NSLog(@"-[%@ %@] ~ERROR~ %@", self, NSStringFromSelector(_cmd), error.localizedDescription);
+                                    userInfo: @{ NSLocalizedDescriptionKey : @"Data was NULL."} ];
+            NSLog(@"-[%@ %@] ~ERROR~ %@", self, NSStringFromSelector(_cmd), [*error localizedDescription]);
             return nil;
         }
-        NSLog(@"-[%@ %@] ~ERROR~ %@", self, NSStringFromSelector(_cmd), @"Pointer was NULL.");
+        NSLog(@"-[%@ %@] ~ERROR~ %@", self, NSStringFromSelector(_cmd), @"Data was NULL.");
         return nil;
     }
     
-//    [self parsePrimitive:<#(void *)#> objCType:<#(const char *)#>]
     
-    return nil;
+    // Nil data type
+    if ( self.dataType == nil ) {
+        if (*error) {
+            *error = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
+                                        code:3
+                                    userInfo: @{ NSLocalizedDescriptionKey : @"Data type was NULL."} ];
+            NSLog(@"-[%@ %@] ~ERROR~ %@", self, NSStringFromSelector(_cmd), [*error localizedDescription]);
+            return nil;
+        }
+        NSLog(@"-[%@ %@] ~ERROR~ %@", self, NSStringFromSelector(_cmd), @"Data type was NULL.");
+        return nil;
+
+    }
+    
+    
+    return [self stringFromPrimitive];
+    
+}
+
+
+- (NSString *)parsePrimitiveWithData: (NSData *)data andType:(NSString *)dType error:(NSError **)error {
+    
+    [self setData:data];
+    [self setDType:dType];
+    return [self parsePrimitive:error];
     
 }
 
 
 
-
-
-
-- (void)setPtr:(void *)newPtr forType:(const char*)type length:(int)length{
+- (NSString *)stringFromPrimitive {
     
-    // Make sure we retain the pointer value.
-    // When I did this using NSValue, the ptr would
-    // lose its value by the time it returned. O_o
-    self.ptrAsData = [NSData dataWithBytes:newPtr length:length];
-    NSLog(@"-[%@ %@] %@", self, NSStringFromSelector(_cmd), self.ptrAsData);
+    return [self parseDataToString];
+}
+
+
+
+- (void)setData: (NSData *)data {
+    
+    self.ptrAsData = data;
+}
+
+- (void)setDType: (NSString *)dType {
+    
+    self.dataType = dType;
+}
+
+- (void)setData: (NSData *)data andType: (NSString *)dType {
+    
+    [self setData:data];
+    [self setDType:dType];
     
 }
 
 
 
-- (NSData *)getPtr {
+// CORE
+//
+// Losing ptr references
+// Need to retain these as NSData
+- (NSString *)parseDataToString {
     
-    return self.ptrAsData;
-}
-
-
-- (NSString *)stringWithPrimitiveType:(const char *)_argType pointerToData:(void*)arg {
+    // Some extra var storage, since
+    // it was already written with these var
+    // names.
+    // TODO: Find/Replace below var names.
     
-    NSString *argType = [NSString stringWithUTF8String:_argType];
+    const void *arg = self.ptrAsData.bytes;
+    NSString *argType = self.dataType;
+    
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     NSNumber * number = @0;

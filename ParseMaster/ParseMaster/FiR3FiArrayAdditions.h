@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (NSTNArrayAdditions)
+@interface NSArray (FiR3FiArrayAdditions)
 
 + (NSArray *)arrayWithPreferenceSpecifierAndGroup;
 
