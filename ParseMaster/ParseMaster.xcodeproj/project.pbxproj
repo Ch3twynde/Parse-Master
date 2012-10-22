@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DA9FAE11634635A00A8C377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAE01634635A00A8C377 /* Foundation.framework */; };
+		7DA9FAE61634635A00A8C377 /* ParseMaster.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DA9FAE51634635A00A8C377 /* ParseMaster.h */; };
+		7DA9FAE81634635A00A8C377 /* ParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FAE71634635A00A8C377 /* ParseMaster.m */; };
+		7DA9FAF01634635A00A8C377 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAEF1634635A00A8C377 /* SenTestingKit.framework */; };
+		7DA9FAF21634635A00A8C377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAF11634635A00A8C377 /* UIKit.framework */; };
+		7DA9FAF31634635A00A8C377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAE01634635A00A8C377 /* Foundation.framework */; };
+		7DA9FAF61634635A00A8C377 /* libParseMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FADD1634635A00A8C377 /* libParseMaster.a */; };
+		7DA9FAFC1634635A00A8C377 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DA9FAFA1634635A00A8C377 /* InfoPlist.strings */; };
+		7DA9FAFF1634635A00A8C377 /* ParseMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FAFE1634635A00A8C377 /* ParseMasterTests.m */; };
+		7DA9FB1F163473E300A8C377 /* ParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FAE71634635A00A8C377 /* ParseMaster.m */; };
+		7DA9FB231634B1ED00A8C377 /* NSTNDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB221634B1ED00A8C377 /* NSTNDictionaryAdditions.m */; };
+		7DA9FB241634B1ED00A8C377 /* NSTNDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB221634B1ED00A8C377 /* NSTNDictionaryAdditions.m */; };
+		7DA9FB271634B27D00A8C377 /* OBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB261634B27D00A8C377 /* OBJCReturnTypes.m */; };
+		7DA9FB281634B27D00A8C377 /* OBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB261634B27D00A8C377 /* OBJCReturnTypes.m */; };
+		7DA9FB2B1634B3E600A8C377 /* NSTNArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB2A1634B3E600A8C377 /* NSTNArrayAdditions.m */; };
+		7DA9FB2C1634B3E600A8C377 /* NSTNArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB2A1634B3E600A8C377 /* NSTNArrayAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DA9FAF41634635A00A8C377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DA9FAD41634635A00A8C377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DA9FADC1634635A00A8C377;
+			remoteInfo = ParseMaster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7DA9FADB1634635A00A8C377 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				7DA9FAE61634635A00A8C377 /* ParseMaster.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7DA9FADD1634635A00A8C377 /* libParseMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libParseMaster.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA9FAE01634635A00A8C377 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DA9FAE41634635A00A8C377 /* ParseMaster-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseMaster-Prefix.pch"; sourceTree = "<group>"; };
+		7DA9FAE51634635A00A8C377 /* ParseMaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseMaster.h; sourceTree = "<group>"; };
+		7DA9FAE71634635A00A8C377 /* ParseMaster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseMaster.m; sourceTree = "<group>"; };
+		7DA9FAEE1634635A00A8C377 /* ParseMasterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseMasterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA9FAEF1634635A00A8C377 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7DA9FAF11634635A00A8C377 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7DA9FAF91634635A00A8C377 /* ParseMasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParseMasterTests-Info.plist"; sourceTree = "<group>"; };
+		7DA9FAFB1634635A00A8C377 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DA9FAFD1634635A00A8C377 /* ParseMasterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseMasterTests.h; sourceTree = "<group>"; };
+		7DA9FAFE1634635A00A8C377 /* ParseMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseMasterTests.m; sourceTree = "<group>"; };
+		7DA9FB211634B1ED00A8C377 /* NSTNDictionaryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTNDictionaryAdditions.h; sourceTree = "<group>"; };
+		7DA9FB221634B1ED00A8C377 /* NSTNDictionaryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTNDictionaryAdditions.m; sourceTree = "<group>"; };
+		7DA9FB251634B27D00A8C377 /* OBJCReturnTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OBJCReturnTypes.h; path = ReturnTypes/OBJCReturnTypes.h; sourceTree = "<group>"; };
+		7DA9FB261634B27D00A8C377 /* OBJCReturnTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OBJCReturnTypes.m; path = ReturnTypes/OBJCReturnTypes.m; sourceTree = "<group>"; };
+		7DA9FB291634B3E600A8C377 /* NSTNArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTNArrayAdditions.h; sourceTree = "<group>"; };
+		7DA9FB2A1634B3E600A8C377 /* NSTNArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTNArrayAdditions.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DA9FADA1634635A00A8C377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA9FAE11634635A00A8C377 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DA9FAEA1634635A00A8C377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA9FAF01634635A00A8C377 /* SenTestingKit.framework in Frameworks */,
+				7DA9FAF21634635A00A8C377 /* UIKit.framework in Frameworks */,
+				7DA9FAF31634635A00A8C377 /* Foundation.framework in Frameworks */,
+				7DA9FAF61634635A00A8C377 /* libParseMaster.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DA9FAD21634635A00A8C377 = {
+			isa = PBXGroup;
+			children = (
+				7DA9FAE21634635A00A8C377 /* ParseMaster */,
+				7DA9FAF71634635A00A8C377 /* ParseMasterTests */,
+				7DA9FADF1634635A00A8C377 /* Frameworks */,
+				7DA9FADE1634635A00A8C377 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DA9FADE1634635A00A8C377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9FADD1634635A00A8C377 /* libParseMaster.a */,
+				7DA9FAEE1634635A00A8C377 /* ParseMasterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DA9FADF1634635A00A8C377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9FAE01634635A00A8C377 /* Foundation.framework */,
+				7DA9FAEF1634635A00A8C377 /* SenTestingKit.framework */,
+				7DA9FAF11634635A00A8C377 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DA9FAE21634635A00A8C377 /* ParseMaster */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9FB291634B3E600A8C377 /* NSTNArrayAdditions.h */,
+				7DA9FB2A1634B3E600A8C377 /* NSTNArrayAdditions.m */,
+				7DA9FB211634B1ED00A8C377 /* NSTNDictionaryAdditions.h */,
+				7DA9FB221634B1ED00A8C377 /* NSTNDictionaryAdditions.m */,
+				7DA9FB251634B27D00A8C377 /* OBJCReturnTypes.h */,
+				7DA9FB261634B27D00A8C377 /* OBJCReturnTypes.m */,
+				7DA9FAE51634635A00A8C377 /* ParseMaster.h */,
+				7DA9FAE71634635A00A8C377 /* ParseMaster.m */,
+				7DA9FAE31634635A00A8C377 /* Supporting Files */,
+			);
+			path = ParseMaster;
+			sourceTree = "<group>";
+		};
+		7DA9FAE31634635A00A8C377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9FAE41634635A00A8C377 /* ParseMaster-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DA9FAF71634635A00A8C377 /* ParseMasterTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9FAFD1634635A00A8C377 /* ParseMasterTests.h */,
+				7DA9FAFE1634635A00A8C377 /* ParseMasterTests.m */,
+				7DA9FAF81634635A00A8C377 /* Supporting Files */,
+			);
+			path = ParseMasterTests;
+			sourceTree = "<group>";
+		};
+		7DA9FAF81634635A00A8C377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9FAF91634635A00A8C377 /* ParseMasterTests-Info.plist */,
+				7DA9FAFA1634635A00A8C377 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DA9FADC1634635A00A8C377 /* ParseMaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DA9FB021634635A00A8C377 /* Build configuration list for PBXNativeTarget "ParseMaster" */;
+			buildPhases = (
+				7DA9FAD91634635A00A8C377 /* Sources */,
+				7DA9FADA1634635A00A8C377 /* Frameworks */,
+				7DA9FADB1634635A00A8C377 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParseMaster;
+			productName = ParseMaster;
+			productReference = 7DA9FADD1634635A00A8C377 /* libParseMaster.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7DA9FAED1634635A00A8C377 /* ParseMasterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DA9FB051634635A00A8C377 /* Build configuration list for PBXNativeTarget "ParseMasterTests" */;
+			buildPhases = (
+				7DA9FAE91634635A00A8C377 /* Sources */,
+				7DA9FAEA1634635A00A8C377 /* Frameworks */,
+				7DA9FAEB1634635A00A8C377 /* Resources */,
+				7DA9FAEC1634635A00A8C377 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DA9FAF51634635A00A8C377 /* PBXTargetDependency */,
+			);
+			name = ParseMasterTests;
+			productName = ParseMasterTests;
+			productReference = 7DA9FAEE1634635A00A8C377 /* ParseMasterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DA9FAD41634635A00A8C377 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = MilesAlden;
+			};
+			buildConfigurationList = 7DA9FAD71634635A00A8C377 /* Build configuration list for PBXProject "ParseMaster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DA9FAD21634635A00A8C377;
+			productRefGroup = 7DA9FADE1634635A00A8C377 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DA9FADC1634635A00A8C377 /* ParseMaster */,
+				7DA9FAED1634635A00A8C377 /* ParseMasterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DA9FAEB1634635A00A8C377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA9FAFC1634635A00A8C377 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DA9FAEC1634635A00A8C377 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DA9FAD91634635A00A8C377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA9FAE81634635A00A8C377 /* ParseMaster.m in Sources */,
+				7DA9FB231634B1ED00A8C377 /* NSTNDictionaryAdditions.m in Sources */,
+				7DA9FB271634B27D00A8C377 /* OBJCReturnTypes.m in Sources */,
+				7DA9FB2B1634B3E600A8C377 /* NSTNArrayAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DA9FAE91634635A00A8C377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA9FB1F163473E300A8C377 /* ParseMaster.m in Sources */,
+				7DA9FAFF1634635A00A8C377 /* ParseMasterTests.m in Sources */,
+				7DA9FB241634B1ED00A8C377 /* NSTNDictionaryAdditions.m in Sources */,
+				7DA9FB281634B27D00A8C377 /* OBJCReturnTypes.m in Sources */,
+				7DA9FB2C1634B3E600A8C377 /* NSTNArrayAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DA9FAF51634635A00A8C377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DA9FADC1634635A00A8C377 /* ParseMaster */;
+			targetProxy = 7DA9FAF41634635A00A8C377 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7DA9FAFA1634635A00A8C377 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DA9FAFB1634635A00A8C377 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DA9FB001634635A00A8C377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7DA9FB011634635A00A8C377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DA9FB031634635A00A8C377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ParseMaster.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ParseMaster/ParseMaster-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7DA9FB041634635A00A8C377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ParseMaster.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ParseMaster/ParseMaster-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7DA9FB061634635A00A8C377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ParseMaster/ParseMaster-Prefix.pch";
+				INFOPLIST_FILE = "ParseMasterTests/ParseMasterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7DA9FB071634635A00A8C377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ParseMaster/ParseMaster-Prefix.pch";
+				INFOPLIST_FILE = "ParseMasterTests/ParseMasterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DA9FAD71634635A00A8C377 /* Build configuration list for PBXProject "ParseMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DA9FB001634635A00A8C377 /* Debug */,
+				7DA9FB011634635A00A8C377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DA9FB021634635A00A8C377 /* Build configuration list for PBXNativeTarget "ParseMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DA9FB031634635A00A8C377 /* Debug */,
+				7DA9FB041634635A00A8C377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DA9FB051634635A00A8C377 /* Build configuration list for PBXNativeTarget "ParseMasterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DA9FB061634635A00A8C377 /* Debug */,
+				7DA9FB071634635A00A8C377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DA9FAD41634635A00A8C377 /* Project object */;
+}
