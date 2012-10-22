@@ -7,7 +7,7 @@
 //
 
 #import "ParseMaster.h"
-
+#import "OBJCReturnTypes.h"
 
 @implementation ParseMaster
 
@@ -57,7 +57,7 @@
 }
 
 
-- (NSString *)numberWithPrimitiveType:(const char *)_argType pointerToData:(void*)arg {
+- (NSString *)stringWithPrimitiveType:(const char *)_argType pointerToData:(void*)arg {
     
     NSString *argType = [NSString stringWithUTF8String:_argType];
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
@@ -125,7 +125,7 @@
         
         // Flip to string
         string = [number stringValue];
-
+            
         
         // This one is handled slightly differently
         if ( [argType isEqualToString:@"*"] ) {
@@ -134,6 +134,17 @@
             
         } else if ( [argType isEqualToString:@"c"] ) {
             char *someChar = (char*)arg;
+            
+            // Most likely means this char
+            // was actually a BOOL.
+            //
+            // Register values accordingly as
+            // 1 & 0.
+            if ( ((int)*someChar == 1) ) {
+                *someChar = '1';
+            } else if ( ((int)*someChar == 0) ) {
+                *someChar = '0';
+            }
             string = [NSString stringWithFormat:@"%c", *someChar];
         }
 

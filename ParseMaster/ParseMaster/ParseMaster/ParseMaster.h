@@ -20,7 +20,7 @@
 
 - (void)setPtr:(void *)ptr forType:(const char*)type length:(int)length;
 - (NSData *)getPtr;
-- (NSString *)numberWithPrimitiveType:(const char *)_argType pointerToData:(void*)arg;
+- (NSString *)stringWithPrimitiveType:(const char *)_argType pointerToData:(void*)arg;
 
 
 @end
