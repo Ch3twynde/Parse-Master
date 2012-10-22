@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D1DF19E1635CC0D00BE87C3 /* FiR3FiArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DF1951635CC0D00BE87C3 /* FiR3FiArrayAdditions.m */; };
-		7D1DF19F1635CC0D00BE87C3 /* FiR3FiArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DF1951635CC0D00BE87C3 /* FiR3FiArrayAdditions.m */; };
-		7D1DF1A01635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DF1971635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.m */; };
-		7D1DF1A11635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DF1971635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.m */; };
 		7D1DF1A21635CC0D00BE87C3 /* FiR3FiParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DF19A1635CC0D00BE87C3 /* FiR3FiParseMaster.m */; };
 		7D1DF1A31635CC0D00BE87C3 /* FiR3FiParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DF19A1635CC0D00BE87C3 /* FiR3FiParseMaster.m */; };
 		7D1DF1A41635CC0D00BE87C3 /* FiR3FiOBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DF19D1635CC0D00BE87C3 /* FiR3FiOBJCReturnTypes.m */; };
 		7D1DF1A51635CC0D00BE87C3 /* FiR3FiOBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DF19D1635CC0D00BE87C3 /* FiR3FiOBJCReturnTypes.m */; };
+		7D8DDCD21635EEBD00531EF2 /* FiR3FiArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DDCCF1635EEBD00531EF2 /* FiR3FiArrayAdditions.m */; };
+		7D8DDCD31635EEBD00531EF2 /* FiR3FiArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DDCCF1635EEBD00531EF2 /* FiR3FiArrayAdditions.m */; };
+		7D8DDCD41635EEBD00531EF2 /* FiR3FiDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DDCD11635EEBD00531EF2 /* FiR3FiDictionaryAdditions.m */; };
+		7D8DDCD51635EEBD00531EF2 /* FiR3FiDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D8DDCD11635EEBD00531EF2 /* FiR3FiDictionaryAdditions.m */; };
 		7DA9FAE11634635A00A8C377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAE01634635A00A8C377 /* Foundation.framework */; };
 		7DA9FAF01634635A00A8C377 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAEF1634635A00A8C377 /* SenTestingKit.framework */; };
 		7DA9FAF21634635A00A8C377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAF11634635A00A8C377 /* UIKit.framework */; };
@@ -34,27 +34,15 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		7DA9FADB1634635A00A8C377 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		7D1DF1941635CC0D00BE87C3 /* FiR3FiArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiArrayAdditions.h; sourceTree = "<group>"; };
-		7D1DF1951635CC0D00BE87C3 /* FiR3FiArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiArrayAdditions.m; sourceTree = "<group>"; };
-		7D1DF1961635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiDictionaryAdditions.h; sourceTree = "<group>"; };
-		7D1DF1971635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiDictionaryAdditions.m; sourceTree = "<group>"; };
 		7D1DF1991635CC0D00BE87C3 /* FiR3FiParseMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiParseMaster.h; sourceTree = "<group>"; };
 		7D1DF19A1635CC0D00BE87C3 /* FiR3FiParseMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiParseMaster.m; sourceTree = "<group>"; };
 		7D1DF19C1635CC0D00BE87C3 /* FiR3FiOBJCReturnTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiOBJCReturnTypes.h; sourceTree = "<group>"; };
 		7D1DF19D1635CC0D00BE87C3 /* FiR3FiOBJCReturnTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiOBJCReturnTypes.m; sourceTree = "<group>"; };
+		7D8DDCCE1635EEBD00531EF2 /* FiR3FiArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiArrayAdditions.h; sourceTree = "<group>"; };
+		7D8DDCCF1635EEBD00531EF2 /* FiR3FiArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiArrayAdditions.m; sourceTree = "<group>"; };
+		7D8DDCD01635EEBD00531EF2 /* FiR3FiDictionaryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiR3FiDictionaryAdditions.h; sourceTree = "<group>"; };
+		7D8DDCD11635EEBD00531EF2 /* FiR3FiDictionaryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiR3FiDictionaryAdditions.m; sourceTree = "<group>"; };
 		7DA9FADD1634635A00A8C377 /* libParseMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libParseMaster.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA9FAE01634635A00A8C377 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DA9FAE41634635A00A8C377 /* ParseMaster-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseMaster-Prefix.pch"; sourceTree = "<group>"; };
@@ -108,6 +96,17 @@
 			path = ReturnTypes;
 			sourceTree = "<group>";
 		};
+		7D8DDCCD1635EEBD00531EF2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7D8DDCCE1635EEBD00531EF2 /* FiR3FiArrayAdditions.h */,
+				7D8DDCCF1635EEBD00531EF2 /* FiR3FiArrayAdditions.m */,
+				7D8DDCD01635EEBD00531EF2 /* FiR3FiDictionaryAdditions.h */,
+				7D8DDCD11635EEBD00531EF2 /* FiR3FiDictionaryAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		7DA9FAD21634635A00A8C377 = {
 			isa = PBXGroup;
 			children = (
@@ -140,10 +139,7 @@
 		7DA9FAE21634635A00A8C377 /* ParseMaster */ = {
 			isa = PBXGroup;
 			children = (
-				7D1DF1941635CC0D00BE87C3 /* FiR3FiArrayAdditions.h */,
-				7D1DF1951635CC0D00BE87C3 /* FiR3FiArrayAdditions.m */,
-				7D1DF1961635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.h */,
-				7D1DF1971635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.m */,
+				7D8DDCCD1635EEBD00531EF2 /* Categories */,
 				7D1DF1981635CC0D00BE87C3 /* ParseMaster */,
 				7D1DF19B1635CC0D00BE87C3 /* ReturnTypes */,
 				7DA9FAE31634635A00A8C377 /* Supporting Files */,
@@ -187,7 +183,6 @@
 			buildPhases = (
 				7DA9FAD91634635A00A8C377 /* Sources */,
 				7DA9FADA1634635A00A8C377 /* Frameworks */,
-				7DA9FADB1634635A00A8C377 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -276,10 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D1DF19E1635CC0D00BE87C3 /* FiR3FiArrayAdditions.m in Sources */,
-				7D1DF1A01635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.m in Sources */,
 				7D1DF1A21635CC0D00BE87C3 /* FiR3FiParseMaster.m in Sources */,
 				7D1DF1A41635CC0D00BE87C3 /* FiR3FiOBJCReturnTypes.m in Sources */,
+				7D8DDCD21635EEBD00531EF2 /* FiR3FiArrayAdditions.m in Sources */,
+				7D8DDCD41635EEBD00531EF2 /* FiR3FiDictionaryAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA9FAFF1634635A00A8C377 /* ParseMasterTests.m in Sources */,
-				7D1DF19F1635CC0D00BE87C3 /* FiR3FiArrayAdditions.m in Sources */,
-				7D1DF1A11635CC0D00BE87C3 /* FiR3FiDictionaryAdditions.m in Sources */,
 				7D1DF1A31635CC0D00BE87C3 /* FiR3FiParseMaster.m in Sources */,
 				7D1DF1A51635CC0D00BE87C3 /* FiR3FiOBJCReturnTypes.m in Sources */,
+				7D8DDCD31635EEBD00531EF2 /* FiR3FiArrayAdditions.m in Sources */,
+				7D8DDCD51635EEBD00531EF2 /* FiR3FiDictionaryAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +367,10 @@
 				GCC_PREFIX_HEADER = "ParseMaster/ParseMaster-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TEST_AFTER_BUILD = NO;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -384,7 +382,10 @@
 				GCC_PREFIX_HEADER = "ParseMaster/ParseMaster-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TEST_AFTER_BUILD = NO;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -399,6 +400,7 @@
 				GCC_PREFIX_HEADER = "ParseMaster/ParseMaster-Prefix.pch";
 				INFOPLIST_FILE = "ParseMasterTests/ParseMasterTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -414,6 +416,7 @@
 				GCC_PREFIX_HEADER = "ParseMaster/ParseMaster-Prefix.pch";
 				INFOPLIST_FILE = "ParseMasterTests/ParseMasterTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

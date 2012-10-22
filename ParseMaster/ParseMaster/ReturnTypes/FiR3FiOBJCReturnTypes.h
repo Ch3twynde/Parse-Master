@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FiR3FiDictionaryAdditions.h"
 
 @interface FiR3FiOBJCReturnTypes : NSObject
 

@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FiR3FiOBJCReturnTypes.h"
+
+
 
 @interface FiR3FiParseMaster : NSObject {
     
