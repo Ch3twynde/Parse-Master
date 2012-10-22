@@ -8,21 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7DA9FAE11634635A00A8C377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAE01634635A00A8C377 /* Foundation.framework */; };
-		7DA9FAE61634635A00A8C377 /* ParseMaster.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DA9FAE51634635A00A8C377 /* ParseMaster.h */; };
-		7DA9FAE81634635A00A8C377 /* ParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FAE71634635A00A8C377 /* ParseMaster.m */; };
 		7DA9FAF01634635A00A8C377 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAEF1634635A00A8C377 /* SenTestingKit.framework */; };
 		7DA9FAF21634635A00A8C377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAF11634635A00A8C377 /* UIKit.framework */; };
 		7DA9FAF31634635A00A8C377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FAE01634635A00A8C377 /* Foundation.framework */; };
 		7DA9FAF61634635A00A8C377 /* libParseMaster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA9FADD1634635A00A8C377 /* libParseMaster.a */; };
 		7DA9FAFC1634635A00A8C377 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DA9FAFA1634635A00A8C377 /* InfoPlist.strings */; };
 		7DA9FAFF1634635A00A8C377 /* ParseMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FAFE1634635A00A8C377 /* ParseMasterTests.m */; };
-		7DA9FB1F163473E300A8C377 /* ParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FAE71634635A00A8C377 /* ParseMaster.m */; };
 		7DA9FB231634B1ED00A8C377 /* NSTNDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB221634B1ED00A8C377 /* NSTNDictionaryAdditions.m */; };
 		7DA9FB241634B1ED00A8C377 /* NSTNDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB221634B1ED00A8C377 /* NSTNDictionaryAdditions.m */; };
-		7DA9FB271634B27D00A8C377 /* OBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB261634B27D00A8C377 /* OBJCReturnTypes.m */; };
-		7DA9FB281634B27D00A8C377 /* OBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB261634B27D00A8C377 /* OBJCReturnTypes.m */; };
 		7DA9FB2B1634B3E600A8C377 /* NSTNArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB2A1634B3E600A8C377 /* NSTNArrayAdditions.m */; };
 		7DA9FB2C1634B3E600A8C377 /* NSTNArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB2A1634B3E600A8C377 /* NSTNArrayAdditions.m */; };
+		7DA9FB4C1634EF5A00A8C377 /* ParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB481634EF5A00A8C377 /* ParseMaster.m */; };
+		7DA9FB4D1634EF5A00A8C377 /* ParseMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB481634EF5A00A8C377 /* ParseMaster.m */; };
+		7DA9FB4E1634EF5A00A8C377 /* OBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB4B1634EF5A00A8C377 /* OBJCReturnTypes.m */; };
+		7DA9FB4F1634EF5A00A8C377 /* OBJCReturnTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA9FB4B1634EF5A00A8C377 /* OBJCReturnTypes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +41,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				7DA9FAE61634635A00A8C377 /* ParseMaster.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +50,6 @@
 		7DA9FADD1634635A00A8C377 /* libParseMaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libParseMaster.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA9FAE01634635A00A8C377 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DA9FAE41634635A00A8C377 /* ParseMaster-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseMaster-Prefix.pch"; sourceTree = "<group>"; };
-		7DA9FAE51634635A00A8C377 /* ParseMaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseMaster.h; sourceTree = "<group>"; };
-		7DA9FAE71634635A00A8C377 /* ParseMaster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseMaster.m; sourceTree = "<group>"; };
 		7DA9FAEE1634635A00A8C377 /* ParseMasterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseMasterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA9FAEF1634635A00A8C377 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7DA9FAF11634635A00A8C377 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -63,10 +59,12 @@
 		7DA9FAFE1634635A00A8C377 /* ParseMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseMasterTests.m; sourceTree = "<group>"; };
 		7DA9FB211634B1ED00A8C377 /* NSTNDictionaryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTNDictionaryAdditions.h; sourceTree = "<group>"; };
 		7DA9FB221634B1ED00A8C377 /* NSTNDictionaryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTNDictionaryAdditions.m; sourceTree = "<group>"; };
-		7DA9FB251634B27D00A8C377 /* OBJCReturnTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OBJCReturnTypes.h; path = ReturnTypes/OBJCReturnTypes.h; sourceTree = "<group>"; };
-		7DA9FB261634B27D00A8C377 /* OBJCReturnTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OBJCReturnTypes.m; path = ReturnTypes/OBJCReturnTypes.m; sourceTree = "<group>"; };
 		7DA9FB291634B3E600A8C377 /* NSTNArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTNArrayAdditions.h; sourceTree = "<group>"; };
 		7DA9FB2A1634B3E600A8C377 /* NSTNArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTNArrayAdditions.m; sourceTree = "<group>"; };
+		7DA9FB471634EF5A00A8C377 /* ParseMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseMaster.h; sourceTree = "<group>"; };
+		7DA9FB481634EF5A00A8C377 /* ParseMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseMaster.m; sourceTree = "<group>"; };
+		7DA9FB4A1634EF5A00A8C377 /* OBJCReturnTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJCReturnTypes.h; sourceTree = "<group>"; };
+		7DA9FB4B1634EF5A00A8C377 /* OBJCReturnTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJCReturnTypes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,14 +122,12 @@
 		7DA9FAE21634635A00A8C377 /* ParseMaster */ = {
 			isa = PBXGroup;
 			children = (
+				7DA9FB461634EF5A00A8C377 /* ParseMaster */,
+				7DA9FB491634EF5A00A8C377 /* ReturnTypes */,
 				7DA9FB291634B3E600A8C377 /* NSTNArrayAdditions.h */,
 				7DA9FB2A1634B3E600A8C377 /* NSTNArrayAdditions.m */,
 				7DA9FB211634B1ED00A8C377 /* NSTNDictionaryAdditions.h */,
 				7DA9FB221634B1ED00A8C377 /* NSTNDictionaryAdditions.m */,
-				7DA9FB251634B27D00A8C377 /* OBJCReturnTypes.h */,
-				7DA9FB261634B27D00A8C377 /* OBJCReturnTypes.m */,
-				7DA9FAE51634635A00A8C377 /* ParseMaster.h */,
-				7DA9FAE71634635A00A8C377 /* ParseMaster.m */,
 				7DA9FAE31634635A00A8C377 /* Supporting Files */,
 			);
 			path = ParseMaster;
@@ -162,6 +158,24 @@
 				7DA9FAFA1634635A00A8C377 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DA9FB461634EF5A00A8C377 /* ParseMaster */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9FB471634EF5A00A8C377 /* ParseMaster.h */,
+				7DA9FB481634EF5A00A8C377 /* ParseMaster.m */,
+			);
+			path = ParseMaster;
+			sourceTree = "<group>";
+		};
+		7DA9FB491634EF5A00A8C377 /* ReturnTypes */ = {
+			isa = PBXGroup;
+			children = (
+				7DA9FB4A1634EF5A00A8C377 /* OBJCReturnTypes.h */,
+				7DA9FB4B1634EF5A00A8C377 /* OBJCReturnTypes.m */,
+			);
+			path = ReturnTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DA9FAE81634635A00A8C377 /* ParseMaster.m in Sources */,
 				7DA9FB231634B1ED00A8C377 /* NSTNDictionaryAdditions.m in Sources */,
-				7DA9FB271634B27D00A8C377 /* OBJCReturnTypes.m in Sources */,
 				7DA9FB2B1634B3E600A8C377 /* NSTNArrayAdditions.m in Sources */,
+				7DA9FB4C1634EF5A00A8C377 /* ParseMaster.m in Sources */,
+				7DA9FB4E1634EF5A00A8C377 /* OBJCReturnTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,11 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DA9FB1F163473E300A8C377 /* ParseMaster.m in Sources */,
 				7DA9FAFF1634635A00A8C377 /* ParseMasterTests.m in Sources */,
 				7DA9FB241634B1ED00A8C377 /* NSTNDictionaryAdditions.m in Sources */,
-				7DA9FB281634B27D00A8C377 /* OBJCReturnTypes.m in Sources */,
 				7DA9FB2C1634B3E600A8C377 /* NSTNArrayAdditions.m in Sources */,
+				7DA9FB4D1634EF5A00A8C377 /* ParseMaster.m in Sources */,
+				7DA9FB4F1634EF5A00A8C377 /* OBJCReturnTypes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

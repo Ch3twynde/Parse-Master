@@ -62,21 +62,19 @@
     NSString *argType = [NSString stringWithUTF8String:_argType];
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSNumber * number = @1;
+    NSNumber * number = @0;
     NSString * string = @"";
     
-    if ( nil != number ) {
+    if ( arg != NULL ) {
         
-        if ( [argType isEqualToString:@"c"] ) {
-            char *someChar = (char*)arg;
-            number = [NSNumber numberWithChar:*someChar];
-        
-        }
-        
-        else if ( [argType isEqualToString:@"i"] ) {
+        if ( [argType isEqualToString:@"i"] ) {
             int *temp = (int*)arg;
             number = [NSNumber numberWithInt:*temp];
 
+        } else if ( [argType isEqualToString:@"B"] ) {
+            BOOL *temp = (BOOL*)arg;
+            number = [NSNumber numberWithBool:*temp];
+            
         } else if ( [argType isEqualToString:@"s"] ) {
             short *temp = (short*)arg;
             number = [NSNumber numberWithShort:*temp];
@@ -127,12 +125,16 @@
         
         // Flip to string
         string = [number stringValue];
-        
+
         
         // This one is handled slightly differently
         if ( [argType isEqualToString:@"*"] ) {
             char *temp = (char*)arg;
-            string = [NSString stringWithCString:temp encoding:NSUTF8StringEncoding];
+            string = [NSString stringWithCString:temp encoding:NSASCIIStringEncoding];
+            
+        } else if ( [argType isEqualToString:@"c"] ) {
+            char *someChar = (char*)arg;
+            string = [NSString stringWithFormat:@"%c", *someChar];
         }
 
     }
