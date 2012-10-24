@@ -10,7 +10,17 @@
 #import "FiR3FiParseMaster.h"
 #import "FiR3FiOBJCReturnTypes.h"
 #import "FiR3FiDictionaryAdditions.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+
+typedef struct StructTemplate {
+    
+    int i;
+    bool b;
+    
+} StructTemplate;
 
 
 @implementation ParseMasterTests
@@ -29,9 +39,39 @@
     [super tearDown];
 }
 
+
+- (void)sendSomeInt:(int[])theInts {
+    //Do something
+}
+
+
+
+- (void)sendSomeStruct:(StructTemplate)theStruct {
+    //Do something
+}
+
+
 - (void)testPtrSetting
 {
+    
     FiR3FiParseMaster *parser = [[FiR3FiParseMaster alloc] init];
+    
+    // This throws an error as it does
+    // not find/recognize the type encoding...
+    // so will it do the same thing for other structs and things?
+    //
+    // ...rrrr...
+    //
+    NSMethodSignature *sendStructSig = [ParseMasterTests instanceMethodSignatureForSelector:@selector(sendSomeStruct:)];
+    const char *structType = [sendStructSig getArgumentTypeAtIndex:2];
+    
+    
+    const char *unionType = "(UnionTemplate=iB)";
+    NSMethodSignature *sendIntArraySig = [ParseMasterTests instanceMethodSignatureForSelector:@selector(sendSomeInt:)];
+    const char *intArrayType = [sendIntArraySig getArgumentTypeAtIndex:2];
+    
+    NSMethodSignature *setFrameSig = [UIWindow instanceMethodSignatureForSelector:@selector(setFrame:)];
+    const char *cgRectType = [setFrameSig getArgumentTypeAtIndex:2];
     
     // Values to test
     const char *aPtr = "Silly String";
@@ -48,6 +88,12 @@
     void *nullPtr = NULL;
     long long aLongLong = LONG_LONG_MAX;
     char boolAsChar = (char)YES;
+    SEL aSEL = @selector(ceaseBeingNincompoop);
+    CGRect aStruct = CGRectMake(0,0,50,50);
+    int aStaticArray[5] = {0,1,2,3,4};
+    UnionTemplate someUnion = { 1 };
+    StructTemplate someStruct = { 1, true };
+        
     
     // char *
     NSError *err;
@@ -163,7 +209,52 @@
     STAssertNotNil( stringResult, @"ptr is null" );
     NSLog(@"result: %c : %@",boolAsChar, stringResult);
 
+    // SEL
+    newType = [FiR3FiOBJCReturnTypes returnTypeAsStringForKey:@"selector"];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aSEL length:sizeof(SEL)]
+                                          andType:newType
+                                            error:&err];
+    STAssertNotNil( stringResult, @"ptr is null" );
+    NSLog(@"result: %@ : %@",NSStringFromSelector(aSEL), stringResult);
 
+    
+    
+    
+    // Struct
+    newType = [NSString stringWithFormat:@"%s", cgRectType];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aStruct length:sizeof(aStruct)]
+                                          andType:newType
+                                            error:&err];
+    STAssertNotNil( stringResult, @"ptr is null" );
+    NSLog(@"result: %@ : %@", NSStringFromCGRect(aStruct), stringResult);
+    
+    // Array
+    newType = [NSString stringWithFormat:@"%s", intArrayType];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&aStaticArray length:sizeof(aStaticArray)]
+                                          andType:newType
+                                            error:&err];
+    STAssertNotNil( stringResult, @"ptr is null" );
+    NSLog(@"result: %s : %@", (char*)aStaticArray, stringResult);
+
+    // Union
+    newType = [NSString stringWithFormat:@"%s", unionType];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&someUnion length:sizeof(someUnion)]
+                                          andType:newType
+                                            error:&err];
+    STAssertNotNil( stringResult, @"ptr is null" );
+    NSLog(@"result: %d : %@", someUnion.intValue, stringResult);
+
+
+    // Another custom Struct
+    newType = [NSString stringWithFormat:@"%s", structType];
+    stringResult = [parser parsePrimitiveWithData:[NSData dataWithBytes:&someStruct length:sizeof(someStruct)]
+                                          andType:newType
+                                            error:&err];
+    STAssertNotNil( stringResult, @"ptr is null" );
+    NSLog(@"result: %d : %@", someStruct.i, stringResult);
+
+    
+    
 }
 
 @end

@@ -11,6 +11,9 @@
 
 @implementation FiR3FiParseMaster
 
+- (void)sendSomeUnion:(UnionTemplate)theUnion {
+    //Do something
+}
 
 
 - (NSString *)parsePrimitive: (NSError **)error {
@@ -93,10 +96,14 @@
 // Need to retain these as NSData
 - (NSString *)parseDataToString {
     
-    // Some extra var storage, since
-    // it was already written with these var
-    // names.
-    // TODO: Find/Replace below var names.
+
+    // There really is no other way around
+    // this activity than to handle it in
+    // some kind of flow-control manner.
+    //
+    // At least this way the code can finally be reused,
+    // and not fucking cut-paste.
+    //
     
     const void *arg = self.ptrAsData.bytes;
     NSString *argType = self.dataType;
@@ -187,10 +194,42 @@
                 *someChar = '0';
             }
             string = [NSString stringWithFormat:@"%c", *someChar];
+            
+            // SEL
+        } else if ( [argType isEqualToString:@":"] ) {
+            SEL *temp = (SEL*)arg;
+            string = NSStringFromSelector(*temp);
+        
+            // Pointer
+        } else if ( [argType isEqualToString:@"^"] ) {
+            string = [NSString stringWithFormat:@"ptr: <%p>", arg];
+            
+            
+            // TODO FIX HERE
+            // Right now if the arg is a struct,
+            // array or union, there really is no
+            // way to properly parse out the value.
+            // If it was possible to build a type from
+            // a string, that might work.
+            //
+            // Without this however there are simply
+            // too many possibilites to follow this
+            // same sequence of actions as we've done
+            // with basic data types.
+            //
+            // So all I can really do here is return
+            // the raw type as the value. At least that
+            // way you'll know what it is.
+            //
+
+            // Arrays, Structs and Unions
+        } else if ( argType.length > 1  ) {
+            string = argType;
         }
 
+
     }
-    
+
     return string;
 }
 

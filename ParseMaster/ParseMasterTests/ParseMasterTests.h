@@ -10,4 +10,5 @@
 
 @interface ParseMasterTests : SenTestCase
 
+
 @end

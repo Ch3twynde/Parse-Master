@@ -78,7 +78,7 @@
             
             // Multiple value items
             @"array":                    @"[]",
-            @"structure":                @"{}",
+            @"struct":                   @"{}",
             @"union":                    @"()",
             
             // Pointer to type

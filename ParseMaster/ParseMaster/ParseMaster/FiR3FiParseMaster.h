@@ -10,6 +10,11 @@
 #import "FiR3FiOBJCReturnTypes.h"
 
 
+typedef union UnionTemplate {
+    int intValue;
+    bool boolValue;
+} UnionTemplate;
+
 
 @interface FiR3FiParseMaster : NSObject {
     
@@ -18,6 +23,9 @@
 @property (nonatomic, strong) NSString *dataType;
 @property (nonatomic, strong) NSData   *ptrAsData;
 
+// This was just here to make testing easier.
+// It does nothing.
+- (void)sendSomeUnion:(UnionTemplate)theUnion;
 
 - (NSString *)parsePrimitive: (NSError **)error;
 - (NSString *)parsePrimitiveWithData: (NSData *)data andType:(NSString *)dType error:(NSError **)error;
